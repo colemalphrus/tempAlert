@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from src.settings import DB_CON_STRING
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:cole6565@localhost/tempAlert'
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_CON_STRING
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
