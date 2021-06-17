@@ -73,3 +73,20 @@ def following_rules(s, temp, unit):
 
     return False
 
+
+def send_message(msg):
+    """
+    input: message string
+    Output: None
+    Description: Sends SMS message using number information defined in environment variables
+    """
+
+    # TODO: send message with twilio
+    # message = client.messages \
+    #     .create(
+    #     body=msg,
+    #     from_=FROM_NUMBER,
+    #     to=TO_NUMBER
+    # )
+    print(msg)
+

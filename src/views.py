@@ -2,7 +2,7 @@ from flask import escape, request, Response
 from src import app, db
 from src.models import Rules
 import json
-from src.utils import rule_validator, following_rules
+from src.utils import rule_validator, following_rules, send_message
 
 
 @app.route('/temp', methods=['POST'])
@@ -17,16 +17,11 @@ def temp():
             message = {
                 'msg': f'sensor: {r["id"]} broke rule: {ru}'
             }
-            # TODO: SEND NOTIFICATION
-            print(message)
+            # TODO: SEND NOTIFICATION and Build Message function
+            # currently only prints message
+            send_message(message)
             return Response(json.dumps(message), status=200, content_type="application/json")
 
-    # message = client.messages \
-    #     .create(
-    #     body="Join Earth's mightiest heroes. Like Kevin Bacon.",
-    #     from_='+15017122661',
-    #     to='+15558675310'
-    # )
     return Response(json.dumps(r), status=200, content_type="application/json")
 
 

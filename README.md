@@ -1,5 +1,14 @@
 # temp Alert API
 
+### Direction to Run
+
+- Create a Venv
+- Pip Install requierments.txt
+- Add environment variables as defined in the settings.py file
+- Run flask run command
+##### !! I ran out of time after an hour to dockerize the app so ill be updating that later !!
+##### !! This means you will need to add an environment variable to add a database connection !!
+##### !! this is done using flask_sqlalchemy so it should be agnostic as to which databse is used but it was tested in postgres !!
 
 ###  For adding rules
 
